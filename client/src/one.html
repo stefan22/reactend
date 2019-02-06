@@ -1,0 +1,154 @@
+<!--  /*
+ * Open dropdowns on hover instead of click.
+ */
+@media (min-width: 768px) {
+  .dropdown:hover {
+    background: #e7e7e7;
+  }
+  .dropdown:hover > .dropdown-menu {
+    display: block;
+  }
+}
+
+/*
+ * The following is needed since the dropdowns are <div> elements instead
+ * of <a> elements
+ */
+.nav > li > div {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  cursor: default;
+}
+.navbar-nav > li > div {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  line-height: 20px;
+}
+.navbar-default .navbar-nav > li > div {
+  color: rgb(119, 119, 119);
+}
+.navbar-collapse.collapse {
+  display: none;
+}
+.dropdown-open {
+  background: #e7e7e7;
+}
+
+ -->
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="container">
+
+  <!-- Static navbar -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Project name</a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li class="dropdown">
+            <div href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></div>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li class="divider"></li>
+              <li class="dropdown-header">Nav header</li>
+              <li><a href="#">Separated link</a></li>
+              <li><a href="#">One more separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div><!--/.container-fluid -->
+  </nav>
+
+  <!-- Main component for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <h1>Navbar example</h1>
+    <p>This is adapted from the default Bootstrap navbar example to work without JavaScript on larger devices and work without jQuery on smaller devices (but with JavaScript).</p>
+    <p>
+      <a class="btn btn-lg btn-primary" href="//mpetroff.net/2015/03/bootstrap-navbar-without-jquery/" role="button">View blog post about this &raquo;</a>
+    </p>
+  </div>
+
+</div> <!-- /container -->
+
+
+<!-- // Navbar and dropdowns
+var toggle = document.getElementsByClassName('navbar-toggle')[0],
+collapse = document.getElementsByClassName('navbar-collapse')[0],
+dropdowns = document.getElementsByClassName('dropdown');;
+
+// Toggle if navbar menu is open or closed
+function toggleMenu() {
+collapse.classList.toggle('collapse');
+collapse.classList.toggle('in');
+}
+
+// Close all dropdown menus
+function closeMenus() {
+for (var j = 0; j < dropdowns.length; j++) {
+    dropdowns[j].getElementsByClassName('dropdown-toggle')[0].classList.remove('dropdown-open');
+    dropdowns[j].classList.remove('open');
+}
+}
+
+// Add click handling to dropdowns
+for (var i = 0; i < dropdowns.length; i++) {
+dropdowns[i].addEventListener('click', function() {
+    if (document.body.clientWidth < 768) {
+        var open = this.classList.contains('open');
+        closeMenus();
+        if (!open) {
+            this.getElementsByClassName('dropdown-toggle')[0].classList.toggle('dropdown-open');
+            this.classList.toggle('open');
+        }
+    }
+});
+}
+
+// Close dropdowns when screen becomes big enough to switch to open by hover
+function closeMenusOnResize() {
+if (document.body.clientWidth >= 768) {
+    closeMenus();
+    collapse.classList.add('collapse');
+    collapse.classList.remove('in');
+}
+}
+
+// Event listeners
+window.addEventListener('resize', closeMenusOnResize, false);
+toggle.addEventListener('click', toggleMenu, false);
+-->
+
+
+
+
+
+
+
+
+
+

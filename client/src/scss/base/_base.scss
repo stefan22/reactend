@@ -1,0 +1,48 @@
+@import './settings';
+@import './primitive';
+
+/*
+  base
+˚˚˚˚˚˚
+*/
+
+html {
+  font-size: 62.5%;
+  min-height: 100%;
+  width:100%;
+  line-height: 1;
+  box-sizing: border-box;
+
+}
+
+body {
+  font-family: ProximaNova-Regular,"Helvetica Neue",Verdana,Arial,sans-serif;
+  margin:0;
+  font-weight: 400;
+  font-size: $sm-size;
+  background: $bg-white;
+  display: flex;
+  min-width:100%;
+}
+
+#root {
+  display: flex;
+  flex-flow: column;
+  width:100%;
+}
+
+
+h1 {
+  font-size: $lg-size;
+}
+
+h2 {
+  font-size: $md-size;
+  font-weight: 500;
+}
+
+p {
+  font-size: $sm-size;
+  font-weight: 400;
+  color:$black;
+}
