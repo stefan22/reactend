@@ -37,10 +37,11 @@ class MenuComponent extends Component {
     });
   }
 
+
   handleHover(e) {
     const {topTitles} = this.props;
     let eleHovered = e.target.textContent;
-    return topTitles.filter((itm) => {//toggle active
+    return topTitles.filter(itm => {//toggle active
       if(itm.label === eleHovered) {
         this.setState({hover: true});
         itm.active = true;
@@ -48,7 +49,7 @@ class MenuComponent extends Component {
           setTimeout(() => {
             this.setState({hover: false});
             itm.active = false;
-          },150);
+          },350);
         }
       }
       return itm;
@@ -110,6 +111,8 @@ class MenuComponent extends Component {
                 <Dropdown
                   topTitles={this.props.topTitles}
                   handleHover={this.handleHover}
+                  handleMouseOut={this.handleMouseOut}
+                  handleMouseOver={this.handleMouseOver}
                  />
             </div>
           </div>

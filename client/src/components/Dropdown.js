@@ -9,7 +9,9 @@ const Dropdown = (props) => {
     <div className='header-navbottom'>
                   <div className='row'>
                     <div className='col-12'>
-                      <ul className='inner-nav'
+                      <ul
+                      className='inner-nav'
+
                       >
                         {
                           topTitles.map((nome,idx) => {
@@ -17,8 +19,8 @@ const Dropdown = (props) => {
                             <div key={idx} seckey={idx}
                             >
                               <li
-                                onMouseEnter={props.handleHover}
-                                onMouseLeave={props.handleHover}
+                                onMouseOut={props.handleHover}
+                                onMouseOver={props.handleHover}
                                 className={`navigation-item ${(nome.active) ? 'active': ''}`}>
                                 <Link to={nome.link}>
                                   {nome.label}
